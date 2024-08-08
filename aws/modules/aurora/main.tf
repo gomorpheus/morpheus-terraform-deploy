@@ -36,7 +36,7 @@ data "aws_subnet" "az" {
 resource "aws_rds_cluster" "morpheus" {
   cluster_identifier        = var.cluster_id
   engine                    = "aurora-mysql"
-  engine_version            = "5.7.mysql_aurora.2.10.2"
+  engine_version            = "8.0.mysql_aurora.3.05.2"
   availability_zones        = values(data.aws_subnet.az)[*].availability_zone
   master_username           = var.master_username
   master_password           = var.master_password

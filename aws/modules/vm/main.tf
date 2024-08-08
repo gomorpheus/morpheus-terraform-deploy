@@ -5,7 +5,7 @@ locals {
       owners = "137112412989"
     }
     rhel = {
-      name   = "RHEL-8.6.0_HVM-*-x86_64-2-Hourly2-GP2"
+      name   = "RHEL-9.4.0_HVM-*-x86_64-2-Hourly2-GP3"
       owners = "309956199498"
     }
     ubuntu = {

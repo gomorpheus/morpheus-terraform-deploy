@@ -33,11 +33,11 @@ resource "aws_security_group_rule" "elastic" {
   source_security_group_id = var.app_vm_security_group_id
 }
 
-resource "aws_elasticsearch_domain" "elastic" {
+resource "aws_opensearch_domain" "elastic" {
   domain_name           = var.domain_name
-  elasticsearch_version = "7.10"
+  engine_version = "OpenSearch_2.13"
   cluster_config {
-    instance_type            = "r6g.large.elasticsearch"
+    instance_type            = "m6g.large.search"
     dedicated_master_enabled = false
     instance_count           = 3
     zone_awareness_enabled   = true
@@ -56,12 +56,12 @@ resource "aws_elasticsearch_domain" "elastic" {
   }
   domain_endpoint_options {
     enforce_https       = true
-    tls_security_policy = "Policy-Min-TLS-1-2-2019-07"
+    tls_security_policy = "Policy-Min-TLS-1-2-PFS-2023-10"
   }
   ebs_options {
     ebs_enabled = true
     volume_size = 200
-    volume_type = "gp2"
+    volume_type = "gp3"
   }
   encrypt_at_rest {
     enabled = true

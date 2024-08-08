@@ -15,7 +15,7 @@ and only allowing communication directly between services.  Additional ports, su
   - Elastic File System (EFS)
   - Aurora mySQL (RDS)
   - Amazon MQ (RabbitMQ)
-  - OpenSearch (Elasticsearch)
+  - OpenSearch
   - Applicaiton Load Balancer (ALB)
 - IAM user created on the AWS account or an external user granted permission to assume a role into the target AWS account.  This user's credentials can be configured in the credentials file on the local workstation or using environment variables.  Read [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) for more information
 

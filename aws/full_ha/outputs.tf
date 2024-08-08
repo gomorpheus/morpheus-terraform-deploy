@@ -28,17 +28,17 @@ output "efs_dns_name" {
 
 output "logs_cluster_name" {
   value       = module.logs_opensearch.cluster_name
-  description = "Cluster name created in Elasticsearch"
+  description = "Cluster name created in OpenSearch"
 }
 
 output "logs_endpoint" {
   value       = module.logs_opensearch.endpoint
-  description = "DNS name to connect to Elasticsearch"
+  description = "DNS name to connect to OpenSearch"
 }
 
 output "logs_port" {
   value       = module.logs_opensearch.port
-  description = "Port used for Elasticsearch"
+  description = "Port used for OpenSearch"
 }
 
 output "logs_tls_enabled" {

@@ -105,10 +105,10 @@ variable "messaging_broker_name" {
 
 variable "messaging_engine_version" {
   type        = string
-  description = "RabbitMQ engine version (3.9.x), not ActiveMQ"
+  description = "RabbitMQ engine version (3.12.x), not ActiveMQ"
   validation {
-    condition     = substr(var.messaging_engine_version, 0, 4) == "3.9."
-    error_message = "messaging_engine_version must be a RabbitMQ version of 3.9.x"
+    condition     = substr(var.messaging_engine_version, 0, 5) == "3.12."
+    error_message = "messaging_engine_version must be a RabbitMQ version of 3.12.x"
   }
 }
 
